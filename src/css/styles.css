@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-flow:column;
+    background-color: #070f21;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+}
+button{
+    width: 40px;
+}
+main{
+    background-color: #05353e;
+    width: 100vw;
+    height: 90vh;
+}
+footer{
+    background-color: #15c8e8;
+    width: 100vw;
+    height: 10vh;
+}
