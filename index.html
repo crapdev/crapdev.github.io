@@ -4,42 +4,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/css/styles.css">
   <!-- key words for search engines -->
   <meta name="keywords"
-    content="Cristian Albor, Cristian's portfolio, portafolio cristian albor, portafolio Cristian albor">
+  content="Cristian Albor, Cristian's portfolio, portafolio cristian albor, portafolio Cristian albor">
   <meta name="description" content="">
   <meta name="author" content="Cristian Albor">
   <link rel="shortcut icon" href="linkdelicono" type="image/x-icon">
   <title>Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/index.css">
 
 </head>
 <!-- Semantica del proyecto -->
 
 <body>
 
-  <header>
-    <div class="header-inner">
+  <header class="header">
 
       <a href="#inicio">
         <img src="/public/img/whiteLogo.png" alt="Logo de CaapDev" class="logo">
       </a>
 
-      <nav>
-        <a href="#inicio" class="nav-link">Inicio</a>
-        <a href="#proyectos" class="nav-link">Proyectos</a>
+      <nav id="nav-menu" >
+        <a href="#" class="nav-link">Inicio</a>
+        <a href="#proyects" class="nav-link">Proyectos</a>
         <a href="#servicios" class="nav-link">Servicios</a>
-
+        <a href="/src/views/pets.html" class="nav-link">Mascotas</a>
       </nav>
 
-      <button id="nav-toggle">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-        Menu Desple
-      </button>
+      <button id="nav-toggle">≡</button>
 
-    </div>
+    
 
   </header>
 
@@ -62,6 +60,7 @@
   <footer>
     <p>hola este es el footer</p>
   </footer>
+  <script src="/src/js/script.js"></script>
 </body>
 
 </html>
