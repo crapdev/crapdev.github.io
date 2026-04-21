@@ -20,27 +20,13 @@ section{
     height: 50vh;
 }
 footer {
-    width: 100vw;
+    width: 10vw;
 }
 
 /* Tablets */
-@media (min-width: 768px) {
-    #nav-toggle {
-        display: none;
-    }
-    #nav-menu {
-        display: flex;
-    }
-
-    #nav-menu.active {
-        display: none;
-        position: absolute;
-        top: 12vh;
-        right: 5vw;
-        display: flex;
-        flex-direction: column;
-    }
-}
+/* @media (min-width: 768px) {
+    
+} */
 
 /* Laptops  */
 /* @media (min-width: 992px) {
