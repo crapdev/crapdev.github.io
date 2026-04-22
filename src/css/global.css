@@ -5,11 +5,11 @@
 }
 
 :root {
-    --primary-color: #0ff;
-    --secondary-color: #003300;
-    --background-color: #13161c;
+    --background-color: #070f21;
+    --green: #22cfab;
+    --pale-green: #22cfab99;
     --text-color: #fff;
-    --font-family: "Anton", sans-serif;
+    /* --font-family:  sans-serif; */
 }
 
 html {
@@ -17,88 +17,128 @@ html {
 }
 
 body {
-    display: flex;
-    flex-flow: column;
+    display: block;
     background-color: var(--background-color);
-    color: var(--text-color);
+    /* background: linear-gradient(90deg,#121212, #121212, #001d00, #121212, #121212 ); */
 }
 
 /* estilos del header */
 header {
     position: sticky;  /* Nos permite fijar el header en la parte superior del viewport */
     top: 0; /* Asegura que el header se quede en la parte superior */
-    width: 100vw;
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #ffffff;
-    background-color: #003300 ;
 }
 
-.logo {
-    height: 4rem;
-    width: auto;
-    margin-top: 0.7rem;
-    margin-left: 1rem;
-}
-.nav-link {
-    top: ;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
 
 /* Styles for mobile devices */
 @media (max-width: 768px){
+
+    .brand {
+        display: flex;
+        align-items: center;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+    .logo {
+        height: 3rem;
+        width: auto;
+        margin: 0 0;
+    
+    }
+    .brand span{
+        color: #fff;
+    }
+
+
+    /* styles for the navigation menu */
     #nav-menu {
         display: none;
     }
-    
     #nav-menu.active {
         height: 10rem;
-        min-width: 220px;
+        min-width: 200px;
         position: absolute;
         top: 12vh;
         right: 5vw;
         display: flex;
         flex-direction: column;
-        border: 1px solid #fff;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
     }
+    #nav-menu a {
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    /* styles for the navigation toggle */
     #nav-toggle {
         background: none;
         border: none;
         color: #fff;
-        font-size: 2.5rem;
-        margin-right : 1rem;
-        cursor: pointer;
+        font-size: 2.1rem;
+        margin-right: 1.5rem;
     }
     
     #nav-toggle.active {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
-    
-    
 }
+
+
 /* styles for desktop */
 @media (min-width: 768px) {
+    header{
+        background-color: rgba(18, 18, 18, 0.08);
+        backdrop-filter: blur(10px);
+    }
+    .brand {
+        display: flex;
+        align-items: center;
+        margin-left: 4rem;
+        text-decoration: none;
+    }
+    .logo {
+        height: 4rem;
+        width: auto;
+    }
+    .brand span{
+        color: #fff;
+        font-size: 1.2rem;
+        margin: 0 0 0.3rem 0;
+    }
     /* header{
         background-color: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
     } */
-    #nav-toggle {
-        display: none;
-    }
+     /* styles for the navigation menu */
     #nav-menu {
         display: flex;
-        border: 1px solid #fff;
+        align-items: center;
+        height: 6vh;
+        width: auto;
+        padding: 0 1rem;
+        margin-right: 7rem;
+        border-radius: 40px;
+        box-shadow: 0 0 8px #22cfab99;
+        align-self: center;
     }
     #nav-menu a {
         margin: 0 1rem;
-        font-size: ;
+        font-size: 1rem;
+        text-decoration: none;
+        color: #fff;
     }
 
+    /* styles for the navigation toggle */
+    #nav-toggle {
+        display: none;
+    }
+    
 }
