@@ -19,6 +19,7 @@ section{
     display: block;
     unicode-bidi: isolate;
     margin: 9vh 0;
+    height: auto;
 }
 
 /* first section */
@@ -29,7 +30,6 @@ section{
     padding: 0 10vw;
     color: var(--text-color);
     row-gap: 2rem;
-    height: auto;
 }
 .text-container{
     display: inherit;
@@ -47,6 +47,7 @@ h1{
     box-shadow: 0 0 10px #22cfab99;
     border-radius: 20px;
 }
+
 /* second section */
 #proyects{
     display: block;
@@ -57,16 +58,43 @@ h1{
     font-size: 1.8rem;
     
 }
-.proyect-container{
+.proyects-container{
+    margin-top: 5vh;
+}
+.proyects-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     justify-content: center;
 }
+/* styles for each proyect */
 .proyect-container {
     text-decoration: none;
     color: var(--text-color);
-    border: 1px solid #e21313;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+.card-content div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.card-content div img{
+    width: 2.8rem;
+}
+.card-content h3{
+    font-size: 1.1rem;
+}
+
+.card-content p{
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.proyect-container img{
+    border-radius: 20px;
 }
 
 /* footer's styles */
