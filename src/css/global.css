@@ -19,20 +19,27 @@ html {
 body {
     display: block;
     background-color: var(--background-color);
-    /* background: linear-gradient(90deg,#121212, #121212, #001d00, #121212, #121212 ); */
 }
 
-/* estilos del header */
+/* styles for the header */
 header {
-    position: sticky;  /* Nos permite fijar el header en la parte superior del viewport */
-    top: 0; /* Asegura que el header se quede en la parte superior */
+    position: sticky; 
+    top: 0;
     width: 100%;
     height: 10vh;
     display: flex;
     justify-content: space-between;
     background-color: rgba(18, 18, 18, 0.08);
     backdrop-filter: blur(10px);
+    z-index: 1;
 }
+h1, h2{
+    font-family: "Oswald";
+}
+p,label,input{
+    font-family: "Ubuntu";
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -62,7 +69,7 @@ img{
     #nav-menu {
         display: none;
     }
-    /* cambiar el color del background-color a un gris --------- */
+
     #nav-menu.active {
         height: 10rem;
         min-width: 200px;
@@ -98,7 +105,7 @@ img{
 }
 
 
-/* styles for desktop */
+/* styles from tablets to desktop */
 @media (min-width: 768px) {
     
     .brand {
@@ -116,10 +123,7 @@ img{
         font-size: 1.2rem;
         margin: 0 0 0.3rem 0;
     }
-    /* header{
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-    } */
+
      /* styles for the navigation menu */
     #nav-menu {
         display: flex;

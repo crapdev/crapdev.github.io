@@ -1,10 +1,4 @@
 @import url('/src/css/global.css');
-/* box-shadow: 0 0 10px #fff, 0 0 20px #0ff, 0 0 30px #0ff;  */
-/* background: linear-gradient(130deg,#fff, #003300, #070f21 ); */
-/* para los botones */
-/* background-image: linear-gradient(90deg, #22cfab, #0057a7); */
-/* ox-shadow: 0 0 10px #22cfab; */
-
 
 body {
     display: flex;
@@ -21,7 +15,7 @@ section{
     margin: 9vh 0;
     padding: 0 10vw;
     height: auto;
-    scroll-margin-top: 10vh;
+    scroll-margin-top: 15vh;
     color: var(--text-color);
 }
 
@@ -34,28 +28,43 @@ section{
 }
 .text-container{
     display: inherit;
-    row-gap: 0.8rem;
+    /* row-gap: 0.8rem; */
     
 }
 h1{
     font-size: 2rem;
-}
-.text-container p{
-    line-height: 1.4rem;
+    /* border: 1px solid #fff; */
 }
 .photo-container img{
     border-radius: 10px;
     box-shadow: 0 0 10px var(--pale-green);
     border-radius: 20px;
 }
+.text-container p:last-child{
+    margin-top: 0.8rem;
+}
+.text-container p:first-child{
+    /* border: 1px solid #fff; */
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: var(--green);
+}
+
 
 /* second section */
+#about-me p{
+    margin-top: 2vh;
+    line-height: 1.4rem;
+    
+}
+#about-me p:last-of-type{
+    display: none;
+}
 
 .stack{
-    margin-top: 5vh;
+    margin-top: 6vh;
     display: flex;
     flex-flow: row wrap;
-    /* border: 1px solid #fff; */
     align-items: center;
     justify-content: center;
     row-gap: 2vh;
@@ -67,9 +76,8 @@ h1{
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid var(--glow-color);
     border-radius: 8px; 
-    box-shadow: 
-        0 0 20px var(--glow-color),        /* external */
-        inset 0 0 10px var(--glow-color);  /* Inner */
+    box-shadow: 0 0 20px var(--glow-color),        /* external */
+                inset 0 0 10px var(--glow-color);  /* Inner */
     transition: transform 0.3s ease;
 
 }
@@ -127,62 +135,178 @@ h1{
 .card-content h3{
     font-size: 1.1rem;
 }
-
 .card-content p{
     margin-top: 10px;
     font-size: 1rem;
 }
-
 .proyect-container img{
     border-radius: 20px;
 }
 
+
+/* fourth section */
+form{
+    margin-top: 5vh;
+    padding: 10vh 10vw;
+    border: 1px solid var(--pale-green);
+    border-radius: 30px;
+    background-image: linear-gradient(111deg, #ffffff0d, #ffffff08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+fieldset{
+    border: none;
+}
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vh;
+}
+input, select, textarea {
+    background: transparent; /* without background */
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+option{
+    background-color: var(--background-color);
+}
+/* to click o write */
+input:focus, select:focus, textarea:focus {
+    border-bottom: 1px solid var(--green); /* the line lights up */
+}
+form button{
+    margin-top: 5vh;
+    background-image: linear-gradient(90deg, var(--green), #0057a7);
+    border-radius: 50px;
+    box-shadow: 0 0 10px var(--green);
+    border: 1px solid var(--green);
+    color: #fff;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
 /* footer's styles */
 footer {
-    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-color);
+
+}
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ajusta el ancho total */
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    
+}
+.text {
+    color: #a0a0a0;
+    font-family: sans-serif;
+    font-size: 14px;
+    padding: 0 20px; /* Espacio entre el texto y las líneas */
+    white-space: nowrap;
+}
+
+.line {
+    flex: 1; /* Hace que las líneas ocupen todo el espacio disponible */
+    height: 1px;
+}
+
+/* Línea izquierda: se desvanece de izquierda a derecha */
+.line:first-child {
+    background: linear-gradient(to right, transparent, #ffffff);
+}
+
+/* Línea derecha: se desvanece de derecha a izquierda */
+.line:last-child {
+    background: linear-gradient(to left, transparent, #ffffff);
 }
 /* Tablets */
 @media (min-width: 768px) {
+    /* first section */
     #welcome{
         grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: center;
+        gap: 2rem;
     }
+    .text-container h1{
+        font-size: 2.5rem;
+    }
+    .photo-container{
+        max-width: 35vw;
+    }
+
 }
 
 /* Laptops  */
-/* @media (min-width: 992px) {
-    body {
-        font-size: 18px;
-        
+@media (min-width: 992px) {
+    /* first section */
+    .text-container h1{
+        font-size: 3rem;
     }
-} */
+
+    /* second section */
+    #about-me p:first-of-type{
+    display: none;
+    }
+    #about-me p:last-of-type{
+    display: flex;
+    }
+    .photo-container{
+        max-width: 30vw;
+    }
+    /* fourth section */
+    form{
+    margin: 5vh 15vw;
+
+    }
+}
 
 /* Escritorios grandes  */
-/* @media (min-width: 1200px) {
-    body {
-        font-size: 20px;
-        
+@media (min-width: 1200px) {
+    /* section{
+    margin: 20vh 0;
     }
-    main{
-        border: 1px solid #ffffff;
+    #welcome{
+        margin-top: 8vh;
+    } */
+    h2{
+        font-size: 2.7rem;
     }
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    p{
+        font-size: 2rem;
     }
-    a{
-        border: 1px solid #ffffff;
+    /* first section */
+    .text-container h1{
+        font-size: 4rem;
     }
-    nav{
-        display: flex;
-        border: 1px solid #ffffff;
+    .text-container p:first-of-type{
+        font-size: 1.5rem;
     }
-    #nav-toggle{
-        display: none;
+
+    .text-container p:last-of-type{
+        font-size: 2rem;
     }
-} */
+
+    /* second section */
+
+}
 
 /* .bi{
     border: 1px solid #ffffff;

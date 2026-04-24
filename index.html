@@ -12,14 +12,16 @@
   <meta name="author" content="Cristian Albor" />
   <link rel="shortcut icon" href="linkdelicono" type="image/x-icon" />
   <title>Portfolio</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/css/index.css" />
 </head>
 <!-- Semantica del proyecto -->
 
 <body>
   <header>
-    <a href="#inicio" class="brand">
+    <a href="#" class="brand">
       <img src="/public/img/whiteLogo.png" alt="Logo de CaapDev" class="logo" />
       <span>crapdev</span>
     </a>
@@ -38,15 +40,10 @@
     <!-- section one -->
     <section id="welcome">
       <div class="text-container">
-        <h1>Cristian Albor</h1>
+        <p>Hi i'm</p>
+        <h1>CRISTIAN ALBOR</h1>
         <p>
-          Soy desarrollador web en la creación de aplicaciones web modernas,
-          atractivas y funcionales.
-          <br />
-          Mi pasión por la tecnología y el desarrollo me ha llevado a
-          esforzarme en crear soluciones innovadoras y de alta calidad que
-          satisfagan las necesidades de los usuarios y superen sus
-          expectativas.
+          I design and develop scalable, high-performance web solutions focused on user experience and clean architecture.
         </p>
       </div>
 
@@ -55,11 +52,23 @@
       </div>
     </section>
 
+  
     <!-- section two -->
     <section id="about-me">
       <h2>About me</h2>
       <p>
-        Soy un desarrollador web apasionado por la creación de aplicaciones web modernas, atractivas y funcionales. Mi pasión por la tecnología y el desarrollo me ha llevado a esforzarme en crear soluciones innovadoras y de alta calidad que satisfagan las necesidades de los usuarios y superen sus expectativas.
+        I’m driven by technology and its power to break barriers and turn ideas into real impact. I’m naturally curious, enthusiastic, and passionate about building things that go beyond expectations.
+        I focus on creating solutions that deliver real value especially for the end user by turning complex ideas into simple, intuitive and high-performing applications.
+        I’m constantly learning, growing, and pushing myself to build meaningful things.
+      </p>
+      <p>
+        I’m driven by technology and its power to break barriers and turn ideas into real impact. I’m naturally curious, enthusiastic, and deeply passionate about building things that go beyond expectations where “impossible” is just a starting point.
+        <br>
+        I focus on creating solutions that don’t just meet client needs, but deliver value across the entire experience, especially for the end user. I bring problem-solving, resilience, and intention into every line of code, turning complex ideas into simple, intuitive and high performing applications.
+        <br>
+        I grew up surrounded by limiting beliefs and barriers, which I’ve challenged and overcome over time. That journey shaped my mindset: adaptable, persistent, and always looking for a way forward even in the most constrained situations.
+        <br>
+        I enjoy collaborative environments where different perspectives come together to build meaningful things with excellence. I’m constantly learning, refining my skills, and pushing myself to grow because I truly believe in the level I can reach by combining talent with discipline, passion, and the right guidance.
       </p>
       <div class="stack">
         <div style="--glow-color: #F7DF1E;">
@@ -127,6 +136,8 @@
       </div>
     </section>
 
+    
+
     <!-- section three -->
     <section id="proyects">
       <h2>Proyects</h2>
@@ -139,12 +150,12 @@
           <div class="card-content">
             <div>
               <img src="https://cdn.prod.website-files.com/687f5518f421b6ae912e5bfb/69402dc3b8c132e6d8649c18_card-number_1.svg" alt="one">
-              <h3>Etiquetado automatizado con SGA</h3>
+              <h3>Automated labeling with GHS</h3>
             </div>
             <p>
-              Aplicativo web que automatiza la generación de etiquetas de productos químicos
-              según el Sistema Globalmente Armonizado (SGA), utilizando datos de las Hojas 
-              de Seguridad (FDS).
+              Web application that automates the generation of chemical labels
+              in accordance with the Globally Harmonized System (GHS), using data from
+              Safety Data Sheets (SDS).
             </p>
           </div>
           
@@ -157,11 +168,11 @@
           <div class="card-content">
             <div>
               <img src="https://cdn.prod.website-files.com/687f5518f421b6ae912e5bfb/69402dc36816bfef7cfeade2_card-number_2.svg" alt="Two">
-              <h3>Sistema Basico de Inventarios</h3>
+              <h3>Basic Inventory System</h3>
             </div>
             <p>
-              Proyecto de sistema de inventarios implementando CRUD
-              desarrollado en python.
+              Project of inventory system implementing CRUD
+              developed in python.
             </p>
           </div>
         </a>
@@ -172,11 +183,11 @@
             <div class="card-content">
               <div>
                 <img src="https://cdn.prod.website-files.com/687f5518f421b6ae912e5bfb/69402dc432c4b9d1d667b88a_card-number_3.svg" alt="Three">
-                <h3>Sistema de Gestión de Estudiantes con Persistencia de Datos</h3>
+                <h3>Student Management System with Data Persistence</h3>
               </div>
               <p>
-                Proyecto de sistema de gestion de estudiantes implementando
-                CRUD desarrollado en python
+                Project of student management system implementing
+                CRUD developed in python
               </p>
             </div>
         </a>
@@ -187,11 +198,51 @@
     <!-- section four -->
     <section id="contact">
       <h2>Contact</h2>
+      <form class="contact-form">
+        <p>Do you have a project in mind? Let's talk.</p>
+
+        <!-- Agrupamos campos relacionados para mejorar la accesibilidad -->
+        <fieldset>
+
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="nombre" placeholder="Ej. Cristian Albor" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="cristian@ejemplo.com" required>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <select id="asunto" name="subject">
+              <option value="proyect">Choose</option>
+              <option value="proyect">full-time job</option>
+              <option value="job">Freelance job</option>
+              <option value="other">Another reason</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="mensaje" name="message" rows="5" placeholder="Tell me about your idea..." required></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Send message</button>
+      </form>
+
     </section>
   </main>
 
   <footer>
-    <p>hola este es el footer</p>
+    <div class="divider">
+      <span class="line"></span>
+      <span class="text">Bye</span>
+      <span class="line"></span>
+    </div>
+    <p>© 2026 Cristian Albor — Todos los derechos reservados.</p>
   </footer>
   <script src="/src/js/script.js"></script>
 </body>
